@@ -1,0 +1,68 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Tue May 09 00:28:53 2017
+| Host         : EALAB01 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file TopModule_control_sets_placed.rpt
+| Design       : TopModule
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    15 |
+| Minimum Number of register sites lost to control set restrictions |    60 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              23 |           13 |
+| No           | No                    | Yes                    |              69 |           28 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              30 |           10 |
+| Yes          | No                    | Yes                    |              10 |            5 |
+| Yes          | Yes                   | No                     |              64 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+------------------------------+-------------------------+------------------+----------------+
+|      Clock Signal      |         Enable Signal        |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++------------------------+------------------------------+-------------------------+------------------+----------------+
+|  U3/dut/clock4         |                              | clr_IBUF                |                1 |              1 |
+|  dclk_BUFG             |                              |                         |                1 |              2 |
+|  U4/hex_reg[3]_i_2_n_0 |                              |                         |                1 |              4 |
+|  clock8                | U3/obstaclepassed[4]_i_1_n_0 | U3/counting[31]_i_1_n_0 |                2 |              5 |
+|  U3/red_reg[2]_i_2_n_0 |                              |                         |                5 |              8 |
+|  U3/dut/clock5         | U3/jumping[7]_i_1_n_0        |                         |                4 |              9 |
+|  clock8                |                              |                         |                6 |              9 |
+|  dclk_BUFG             | U3/sel                       | clr_IBUF                |                5 |             10 |
+|  U1/out[1]             |                              | clr_IBUF                |                6 |             13 |
+|  clock8                | U3/movement[9]_i_2_n_0       | U3/movement[9]_i_1_n_0  |                6 |             13 |
+|  clock8                | U3/movementcoyote[7]_i_2_n_0 | U3/movementcoyote       |                7 |             14 |
+|  wiz/inst/clk_out1     |                              | clr_IBUF                |                5 |             17 |
+|  clk_BUFG              | U4/sel                       |                         |                6 |             21 |
+|  clock8                | U3/counting[31]_i_2_n_0      | U3/counting[31]_i_1_n_0 |                9 |             32 |
+|  dclk_BUFG             |                              | clr_IBUF                |               16 |             38 |
++------------------------+------------------------------+-------------------------+------------------+----------------+
+
+
